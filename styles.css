@@ -1,6 +1,6 @@
-/* =======================
+/*
    RESET Y ESTILOS GENERALES
-   ======================= */
+*/
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +15,9 @@ body {
     padding: 20px;
 }
 
-/* =======================
+/*
      HEADER (Usado en ambas páginas)
-     ======================= */
+*/
 header {
     display: flex;
     justify-content: space-between;
@@ -59,9 +59,9 @@ h2 {
     text-align: center;
 }
 
-/* =======================
+/*
      INDEX.HTML - Página principal
-     ======================= */
+*/
 
 #title {
     text-align: center;
@@ -123,9 +123,9 @@ h2 {
     color: #555;
 }
 
-/* =======================
+/*
      CONTACTO.HTML - Formulario de contacto
-     ======================= */
+*/
 
 form {
     max-width: 600px;
@@ -174,9 +174,9 @@ button[type="submit"]:hover {
     background-color: #333;
 }
 
-/* =======================
+/*
      FOOTER
-     ======================= */
+*/
 footer {
     text-align: center;
     margin-top: 50px;
@@ -187,9 +187,9 @@ footer {
     position: sticky;
 }
 
-/* =======================
+/*
      RESPONSIVE (ambas páginas)
-     ======================= */
+*/
 @media (max-width: 600px) {
     header {
         flex-direction: column;

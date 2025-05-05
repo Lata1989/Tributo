@@ -26,11 +26,11 @@
         <section>
             <h2>Escribinos tu mensaje</h2>
             <form id="contact-form">
-                <label for="nombre">Nombre:</label><br />
-                <input type="text" id="nombre" name="nombre" required /><br /><br />
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
 
-                <label for="mensaje">Mensaje:</label><br />
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
@@ -47,11 +47,8 @@
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('¡Mensaje enviado correctamente!');
-            console.log(mensaje);
             mensaje.value = "";
-            console.log(nombre);
             nombre.value = "";
-            // window.location.reload();
         });
     </script>
 </body>
