@@ -20,17 +20,21 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Contacto</h2>
-
+    <main class="contacto-container">
         <section>
             <h2>Escribinos tu mensaje</h2>
             <form id="contact-form">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required />
 
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required />
+
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
@@ -42,13 +46,11 @@
     </footer>
 
     <script>
-        let nombre = document.getElementById('nombre');
-        let mensaje = document.getElementById('mensaje');
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
             alert('¡Mensaje enviado correctamente!');
-            mensaje.value = "";
-            nombre.value = "";
+            form.reset();
         });
     </script>
 </body>
