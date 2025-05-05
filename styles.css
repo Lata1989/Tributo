@@ -1,0 +1,216 @@
+/* =======================
+   RESET Y ESTILOS GENERALES
+   ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #111;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* =======================
+     HEADER (Usado en ambas páginas)
+     ======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #111;
+}
+
+/* MENÚ NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* =======================
+     INDEX.HTML - Página principal
+     ======================= */
+
+#title {
+    text-align: center;
+    font-size: 2em;
+    margin: 30px 0 20px;
+    font-weight: bold;
+}
+
+#img-div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#image {
+    width: 250px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    filter: grayscale(100%);
+}
+
+#img-caption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #444;
+}
+
+#tribute-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#tribute-info h2,
+#tribute-info h3 {
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+#tribute-info ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    padding-left: 10px;
+}
+
+#tribute-info p {
+    margin-bottom: 10px;
+}
+
+#tribute-link {
+    color: #000;
+    text-decoration: underline;
+}
+
+#tribute-link:hover {
+    color: #555;
+}
+
+/* =======================
+     CONTACTO.HTML - Formulario de contacto
+     ======================= */
+
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    color: #111;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #333;
+    background-color: #fff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* =======================
+     FOOTER
+     ======================= */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* =======================
+     RESPONSIVE (ambas páginas)
+     ======================= */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    #title {
+        font-size: 1.6em;
+    }
+
+    #image {
+        width: 200px;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}

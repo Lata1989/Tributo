@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/icons8-filosofia-ios-17-outlined-16.png" type="image/x-icon">
+    <title>Contacto - Tributo a Ayn Rand</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Escribinos tu mensaje</h2>
+            <form id="contact-form">
+                <label for="nombre">Nombre:</label><br />
+                <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+                <label for="mensaje">Mensaje:</label><br />
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pablo de la Iglesia</p>
+    </footer>
+
+    <script>
+        let nombre = document.getElementById('nombre');
+        let mensaje = document.getElementById('mensaje');
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado correctamente!');
+            console.log(mensaje);
+            mensaje.value = "";
+            console.log(nombre);
+            nombre.value = "";
+            // window.location.reload();
+        });
+    </script>
+</body>
+
+</html>
