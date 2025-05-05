@@ -25,6 +25,7 @@ header {
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
     flex-wrap: wrap;
+    position: sticky;
 }
 
 header h1 {
@@ -50,6 +51,12 @@ nav a {
 
 nav a:hover {
     color: #555;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #111;
+    text-align: center;
 }
 
 /* =======================
@@ -177,6 +184,7 @@ footer {
     border-top: 1px solid #ccc;
     font-size: 0.9em;
     color: #777;
+    position: sticky;
 }
 
 /* =======================
