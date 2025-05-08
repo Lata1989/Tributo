@@ -26,11 +26,24 @@ header {
     border-bottom: 1px solid #ccc;
     flex-wrap: wrap;
     position: sticky;
+    top: 0; /* Para que sea sticky */
+    background-color: #fff; /* Fondo blanco para el sticky */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
 }
 
-header h1 {
+.site-title {
     font-size: 1.8em;
     color: #111;
+    margin: 0; /* Resetear márgenes por defecto del h1 */
+}
+
+.site-title a {
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    color: inherit; /* Heredar el color del h1 */
+}
+
+.site-title a:hover {
+    color: #555; /* Cambiar color al pasar el ratón si deseas */
 }
 
 /* MENÚ NAV */
@@ -42,14 +55,14 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav a {
+nav .nav-link {
     text-decoration: none;
     color: #000;
     font-weight: bold;
     transition: color 0.2s ease;
 }
 
-nav a:hover {
+nav .nav-link:hover {
     color: #555;
 }
 
@@ -63,19 +76,19 @@ h2 {
      INDEX.HTML - Página principal
 */
 
-#title {
+.main-title {
     text-align: center;
     font-size: 2em;
     margin: 30px 0 20px;
     font-weight: bold;
 }
 
-#img-div {
+.image-container {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#image {
+.main-image {
     width: 250px;
     max-width: 90%;
     height: auto;
@@ -85,41 +98,41 @@ h2 {
     filter: grayscale(100%);
 }
 
-#img-caption {
+.image-caption {
     margin-top: 10px;
     font-style: italic;
     font-size: 0.9em;
     color: #444;
 }
 
-#tribute-info {
+.tribute-info {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-#tribute-info h2,
-#tribute-info h3 {
+.tribute-info h2,
+.tribute-info h3 {
     margin: 20px 0 10px;
     font-weight: bold;
 }
 
-#tribute-info ul {
+.tribute-info ul {
     margin-left: 20px;
     list-style-type: disc;
     padding-left: 10px;
 }
 
-#tribute-info p {
+.tribute-info p {
     margin-bottom: 10px;
 }
 
-#tribute-link {
+.tribute-link {
     color: #000;
     text-decoration: underline;
 }
 
-#tribute-link:hover {
+.tribute-link:hover {
     color: #555;
 }
 
@@ -127,21 +140,38 @@ h2 {
      CONTACTO.HTML - Formulario de contacto
 */
 
-form {
+.contacto-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    /* background-color: #f5f5f5; */
+}
+
+.contacto-container section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
     max-width: 600px;
-    margin: 40px auto;
+}
+
+.contact-form {
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-form label {
+.contact-form label {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-form input,
-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #aaa;
@@ -151,8 +181,8 @@ form textarea {
     color: #111;
 }
 
-form input:focus,
-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
     border-color: #333;
     background-color: #fff;
@@ -175,27 +205,6 @@ button[type="submit"]:hover {
 }
 
 /*
-     CONTACTO - Full page layout
-*/
-.contacto-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    /* background-color: #f5f5f5; */
-}
-
-.contacto-container section {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-}
-
-/*
      FOOTER
 */
 footer {
@@ -206,6 +215,8 @@ footer {
     font-size: 0.9em;
     color: #777;
     position: sticky;
+    bottom: 0; /* Para que se pegue al final si el contenido no es suficiente */
+    background-color: #fff; /* Fondo blanco para el sticky */
 }
 
 /*
@@ -223,19 +234,23 @@ footer {
         padding-top: 10px;
     }
 
-    #title {
+    .site-title {
+        font-size: 1.5em;
+    }
+
+    .main-title {
         font-size: 1.6em;
     }
 
-    #image {
+    .main-image {
         width: 200px;
     }
 
-    form {
+    .contact-form {
         padding: 0 10px;
     }
 
-    header h1 {
+    header h1 { /* Esto ya no es necesario, usamos .site-title */
         font-size: 1.5em;
     }
 

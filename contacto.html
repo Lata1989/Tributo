@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/icons8-filosofia-ios-17-outlined-16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/filo.png" type="image/x-icon">
     <title>Contacto - Tributo a Ayn Rand</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <header>
-        <h1>Tributo a Ayn Rand</h1>
+        <h1 class="site-title"><a href="./index.html">Ayn Rand</a></h1>
         <nav>
             <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a class="nav-link" href="./index.html">Inicio</a></li>
+                <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -23,7 +23,7 @@
     <main class="contacto-container">
         <section>
             <h2>Escribinos tu mensaje</h2>
-            <form id="contact-form">
+            <form class="contact-form">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required />
 
@@ -46,7 +46,7 @@
     </footer>
 
     <script>
-        const form = document.getElementById('contact-form');
+        const form = document.querySelector('.contact-form');
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             alert('¡Mensaje enviado correctamente!');
